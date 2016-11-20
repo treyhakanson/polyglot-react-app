@@ -1,0 +1,20 @@
+@mixin mainGradient() {
+	/* background-color gradient */
+	background: rgba(118,188,249,1);
+	background: -moz-linear-gradient(left, rgba(118,188,249,1) 0%, rgba(210,64,247,1) 51%, rgba(237,106,94,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(118,188,249,1)), color-stop(51%, rgba(210,64,247,1)), color-stop(100%, rgba(237,106,94,1)));
+	background: -webkit-linear-gradient(left, rgba(118,188,249,1) 0%, rgba(210,64,247,1) 51%, rgba(237,106,94,1) 100%);
+	background: -o-linear-gradient(left, rgba(118,188,249,1) 0%, rgba(210,64,247,1) 51%, rgba(237,106,94,1) 100%);
+	background: -ms-linear-gradient(left, rgba(118,188,249,1) 0%, rgba(210,64,247,1) 51%, rgba(237,106,94,1) 100%);
+	background: linear-gradient(to right, rgba(118,188,249,1) 0%, rgba(210,64,247,1) 51%, rgba(237,106,94,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76bcf9', endColorstr='#ed6a5e', GradientType=1 );
+}
+
+@mixin genShadow($args...) {
+	-webkit-box-shadow: $args;
+   -moz-box-shadow: $args;
+   box-shadow: $args;	
+}
+
+$headerFont: 'Bungee Inline', cursive;
+$bodyFont: 'PT Sans', sans-serif;

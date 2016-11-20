@@ -1,0 +1,29 @@
+.footer-wrapper {
+	padding: 1rem 2rem;
+	background-color: rgba(237,106,94,1); 
+	height: 10rem;
+	img.footer-icon {
+		vertical-align: bottom;
+		float: right;
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+	ul {
+		list-style-type: none;
+		font-family: $bodyFont;
+		color: white;
+		float: left;
+		li {
+			margin-top: 1rem;
+			margin-right: 1rem;
+			opacity: 1.0;
+			transition: 100ms all;
+			&:hover {
+				cursor: pointer;
+				text-decoration: underline;
+				opacity: 0.75;
+				tansition: 150ms all;
+			}
+		}
+	}
+}

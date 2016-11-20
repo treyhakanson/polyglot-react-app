@@ -1,0 +1,23 @@
+.body-wrapper {
+	font-family: $bodyFont;
+	padding: 3rem 2rem;
+	overflow: auto;
+	.load-more-btn {
+		display: block;
+		font-size: 1.15rem;
+		margin: 2rem auto;
+		width: 200px;
+		height: 60px;
+		border: 2px solid rgba(118,188,249,1);
+		color: rgba(118,188,249,1);
+		background-color: transparent;
+		transition: 100ms all;
+		font-family: $headerFont;
+		&:hover {
+			cursor: pointer;
+			color: white;
+			background-color: rgba(118,188,249,1);
+			transition: 150ms all;
+		}
+	}
+}

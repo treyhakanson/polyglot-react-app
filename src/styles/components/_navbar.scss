@@ -1,0 +1,32 @@
+.navbar-menu {
+	position: fixed;
+	background-color: rgba(237,106,94,1);
+	padding: 10px 1.5rem;
+	height: 30px;
+	top: 0;
+	right: 0;
+	overflow: auto;
+	transition: 100ms all;
+	&:hover {
+		cursor: pointer;
+		transition: 150ms all;
+		svg {
+			opacity: 0.75;
+			transition: 150ms all;
+		}
+		&:after {
+			font-family: $headerFont;
+			color: white;
+			content: 'menu';
+			text-align: left;
+			margin-right: 15px;
+			transition: 150ms all;
+			line-height: 30px;
+		}
+	}
+	svg {
+		float: right;
+		opacity: 1.0;
+		transition: 100ms all;
+	}
+}

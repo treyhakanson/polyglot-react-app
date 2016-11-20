@@ -1,1 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|PT+Sans');
+
 @import "base/variables";
+
+@import "components/loader";
+@import "components/navbar";
+@import "components/header";
+@import "components/body";
+@import "components/article";
+@import "components/news_card";
+@import "components/footer";
+
+* {
+	margin: 0;
+}
+
+html,
+body,
+#root,
+.app-container {
+	height: 100%;
+}
+
+.app-container {
+	overflow: auto;
+}
+
+.body-wrapper {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}

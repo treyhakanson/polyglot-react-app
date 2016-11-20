@@ -13,6 +13,7 @@ module.exports = {
       actions: 'src/redux/actions/index.js',
       LocalStore: 'src/api/index.js',
       routes: 'src/routes.js',
+      images: 'src/assets/images',
       stylesheet: 'src/styles/stylesheet.scss'
     },
     extensions: ['', '.js', '.jsx']
@@ -25,6 +26,11 @@ module.exports = {
           presets: ['react', 'es2015']
         },
         test: /\.jsx?$/,
+        exclude: /(node_modules)/
+      },
+      {
+        loader: 'url',
+        test: /\.(png|jpg)$/,
         exclude: /(node_modules)/
       }
     ]

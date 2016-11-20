@@ -1,0 +1,30 @@
+.article-wrapper {
+	position: relative;
+	overflow: auto;
+	.back-btn {
+		display: flex;
+		position: absolute;
+		align-items: center;
+		justify-content: center;
+		bottom: 15px;
+		right: 15px;
+		height: 70px;
+		width: 70px;
+		border-radius: 35px;
+		background-color: rgba(237,106,94,1);
+		@include genShadow(0 0 5px 0 rgba(0,0,0,0.10));
+		opacity: 1.0;
+		transition: 100ms all;
+		&:hover {
+			cursor: pointer;
+			opacity: 0.75;
+			transition: 150ms all;
+		}
+	}
+	.article-content {
+		
+	}
+	iframe {
+		width: 100%;
+	}
+}

@@ -1,0 +1,37 @@
+.header-wrapper {
+	transition: 150ms all;
+	&.collapsed {
+		transition: 200ms all;
+		div.header-overlay {
+			padding: 5px 1rem;
+			text-align: left;
+			transition: 200ms all;
+			img.header-img {
+				height: 40px;
+				width: 40px;
+				transition: 200ms all;
+			}
+			h1.header-text {
+				display: none;
+				transition: 200ms all;
+			}
+		}	
+	}
+	@include mainGradient;
+	.header-overlay {
+		background-color: rgba(0, 0, 0, 0.25);
+		padding: 5rem 0;
+		text-align: center;
+		.header-img {
+			height: 8rem;
+			width: 8rem;
+			object-fit: contain;
+			object-position: center;
+		}
+		.header-text {
+			font-family: $headerFont;
+			color: white;
+			font-size: 4rem;
+		}
+	}
+}
