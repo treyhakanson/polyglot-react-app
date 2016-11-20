@@ -1,8 +1,13 @@
 import { combineReducers } from 'redux';
 
 const articles = function(state = [], action) {
-	return state;
-}
+	switch (action.type) {
+		case 'GET_ARTICLES':
+			return action.payload.data;
+		default:
+			return state;
+	}
+};
 
 const rootReducer = combineReducers({
 	articles

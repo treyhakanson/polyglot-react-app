@@ -5,7 +5,7 @@ import NewsCard from './NewsCard.js';
 export default class Body extends Component {
 	constructor(props) {
 		super(props);
-
+		
 	}
 
 	render() {
@@ -16,7 +16,7 @@ export default class Body extends Component {
 			<div className="body-wrapper">
 				{
 					data.map((article, i) =>
-						<NewsCard key={i} onClick={() => { callback(article.link) }} />)
+						<NewsCard key={i} article={article} onClick={() => { callback(article.link) }} />)
 				}
 				<button className="load-more-btn">Load More...</button>
 			</div>

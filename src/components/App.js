@@ -20,7 +20,6 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		// TODO: this won't work right now (no query)
 		this.props.getArticles();
 	}
 
