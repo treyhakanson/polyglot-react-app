@@ -1,16 +1,16 @@
-# A React Boilerplate to Get Things up and Running Fast
-A simple webpack ready with redux, babel, webpack, and a variety of utilities to make testing and building easy. just clone the repo and run:
+# A Simple React App Built of treyhakanson/react-boilerplate
+A simple webpack ready react app with redux, babel, webpack, and a variety of utilities to make testing and building easy. The boilerplate was used to get the app up easily and quickly. just clone the repo and run:
 ```bash
 npm install -d
 ```
 
 Be sure to compile with webpack before attempting to start the server:
 ```bash
-webpack -w
+webpack -w --progress
 ```
-the `-w` flag will tell webpack to continuosly compile down to bundle.js as changes are made.
+the `-w` flag will tell webpack to continuosly compile down to bundle.js as changes are made, and `--progress` will show bundling progress. `-w` is highly recommended, and `--progress` is a personal preference. Neither are required.
 
-Ensure that tests are up and running, and upon success go ahead and start the server as a final check: (*you will need google chrome to run tests*):
+Ensure that tests are up and running, and upon success go ahead and start the server as a final check: (*you will need google chrome to run tests with karma and mocha*):
 ```bash
 npm test
 npm start

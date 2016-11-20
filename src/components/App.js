@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 
 import Navbar from './Navbar.js';
 import Header from './Header.js';
+import Loader from './Loader.js';
 import Body from './Body.js';
 import Article from './Article.js';
 import Footer from './Footer.js';
+
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { getArticles } from '../redux/actions';
 
 class App extends Component {
 	constructor(props) {
@@ -14,23 +19,23 @@ class App extends Component {
 		this.changeArticleState = this.changeArticleState.bind(this);
 	}
 
+	componentDidMount() {
+		// TODO: this won't work right now (no query)
+		this.props.getArticles();
+	}
+
 	changeArticleState(activeArticle) {
 		console.log('hit with: ', activeArticle);
 		this.setState({ activeArticle });
 	}
 
 	render() {
-		if (!this.state.activeArticle) {
-			// TODO: update this with real data
-			var tmp = [
-				{ link: 'http://www.foxnews.com/transcript/2015/03/18/president-obama-liberal-legacy/' },
-				{ link: 'http://www.foxnews.com/transcript/2015/03/18/president-obama-liberal-legacy/' },
-				{ link: 'http://www.foxnews.com/transcript/2015/03/18/president-obama-liberal-legacy/' },
-				{ link: 'http://www.foxnews.com/transcript/2015/03/18/president-obama-liberal-legacy/' },
-				{ link: 'http://www.foxnews.com/transcript/2015/03/18/president-obama-liberal-legacy/' },
-				{ link: 'http://www.foxnews.com/transcript/2015/03/18/president-obama-liberal-legacy/' },
-			];
-			var contentToRender = <Body callback={this.changeArticleState} data={tmp} />;
+		const { articles } = this.props;
+
+		if (articles.length === 0 ) {
+			var contentToRender = <Loader />;
+		} else if (!this.state.activeArticle) {
+			var contentToRender = <Body callback={this.changeArticleState} data={articles} />;
 		} else {
 			var contentToRender = <Article callback={this.changeArticleState} url={this.state.activeArticle} />;
 		}
@@ -46,4 +51,21 @@ class App extends Component {
 	}
 }
 
-export default App;
+function mapStateToProps({ articles }) {
+	return { articles };
+}
+
+export default connect(mapStateToProps, { getArticles })(App);
+
+
+
+
+
+
+
+
+
+
+
+
+
